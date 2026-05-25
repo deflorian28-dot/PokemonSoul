@@ -9577,7 +9577,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     #if P_UPDATED_EXP_YIELDS >= GEN_5
         .expYield = 60,
     #elif P_UPDATED_EXP_YIELDS >= GEN_4
-        .expYield = 73,
+        .expYwhatield = 73,
     #else
         .expYield = 86,
     #endif
@@ -9588,7 +9588,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_SOLID_ROCK, ABILITY_STURDY, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Geodude"),
         .cryId = CRY_GEODUDE,

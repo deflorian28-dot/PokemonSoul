@@ -7,6 +7,8 @@ static const union AnimCmd *const sAnims_SingleFramePlaceHolder[] =
     },
 };
 
+#define sAnims_None sAnims_SingleFramePlaceHolder
+
 static const union AnimCmd *const sAnims_TwoFramePlaceHolder[] =
 {
     sAnim_GeneralFrame0,

@@ -9,6 +9,11 @@ const u32 gMonBackPic_CircledQuestionMark[] = INCGFX_U32("graphics/pokemon/quest
 const u16 gMonPalette_CircledQuestionMark[] = INCGFX_U16("graphics/pokemon/question_mark/circled/normal.pal", ".gbapal");
 const u16 gMonShinyPalette_CircledQuestionMark[] = INCGFX_U16("graphics/pokemon/question_mark/circled/shiny.pal", ".gbapal");
 const u8 gMonIcon_QuestionMark[] = INCGFX_U8("graphics/pokemon/question_mark/icon.png", ".4bpp");
+const u32 gMonFrontPic_Budorin[] = INCGFX_U32("graphics/pokemon/budorin/front.png", ".4bpp.smol");
+const u32 gMonBackPic_Budorin[] = INCGFX_U32("graphics/pokemon/budorin/back.png", ".4bpp.smol");
+const u16 gMonPalette_Budorin[] = INCGFX_U16("graphics/pokemon/budorin/normal.pal", ".gbapal");
+const u16 gMonShinyPalette_Budorin[] = INCGFX_U16("graphics/pokemon/budorin/shiny.pal", ".gbapal");
+const u8 gMonIcon_Budorin[] = INCGFX_U8("graphics/pokemon/budorin/icon.png", ".4bpp");
 #if P_FOOTPRINTS
 #if !P_GBA_STYLE_SPECIES_FOOTPRINTS
     const u8 gMonFootprint_QuestionMark[] = INCGFX_U8("graphics/pokemon/question_mark/footprint.png", ".1bpp");
