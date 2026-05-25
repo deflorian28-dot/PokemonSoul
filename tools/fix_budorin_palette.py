@@ -31,23 +31,45 @@ def make_palette_image(palette):
     pal_img.putpalette(flat)
     return pal_img
 
-def remap_image(img_path, pal_img):
+def find_nearest_palette_index(color, palette):
+    r,g,b = color
+    best_index = 0
+    best_dist = float('inf')
+    for i,(pr,pg,pb) in enumerate(palette):
+        dr = pr - r
+        dg = pg - g
+        db = pb - b
+        dist = dr*dr + dg*dg + db*db
+        if dist < best_dist:
+            best_dist = dist
+            best_index = i
+    return best_index
+
+def remap_image(img_path, palette):
     im = Image.open(img_path).convert('RGBA')
-    # Separate alpha and quantize RGB to palette
-    rgb = Image.new('RGB', im.size, (255,255,255))
-    rgb.paste(im, mask=im.split()[3])
-    pal = rgb.quantize(palette=pal_img, dither=Image.FLOYDSTEINBERG)
-    # Create RGBA result by applying original alpha to quantized image
-    result = pal.convert('RGBA')
-    result.putalpha(im.split()[3])
-    result.save(img_path)
+    pixels = list(im.getdata())
+    indices = []
+    for pixel in pixels:
+        r,g,b,a = pixel
+        if a == 0:
+            indices.append(0)
+        else:
+            indices.append(find_nearest_palette_index((r,g,b), palette))
+    out = Image.new('P', im.size)
+    flat = []
+    for (r,g,b) in palette:
+        flat.extend([r,g,b])
+    flat += [0] * (256*3 - len(flat))
+    out.putpalette(flat)
+    out.putdata(indices)
+    out.info['transparency'] = 0
+    out.save(img_path, bits=4)
     print('Saved', img_path)
 
 def main():
     palette = read_jasc_pal(PALETTE_PATH)
-    pal_img = make_palette_image(palette)
     for f in FILES:
-        remap_image(f, pal_img)
+        remap_image(f, palette)
 
 if __name__ == '__main__':
     main()
