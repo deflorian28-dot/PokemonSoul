@@ -103,14 +103,14 @@ static const u8 sPokeballCoords[STARTER_MON_COUNT][2] =
     {180, 64},
 };
 
-static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
+static const u8 sStarterLabelCoords[STARTER_MON_COUNT][3] =
 {
-    {0, 9},
-    {16, 10},
-    {8, 4},
+    {0, 9, 0},
+    {16, 10, 0},
+    {8, 4, 0},
 };
 
-#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_TREECKO)
+#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_CHIKORITA)
 #define FIRE_STARTER  (IS_FRLG ? SPECIES_CHARMANDER : SPECIES_TORCHIC)
 #define WATER_STARTER (IS_FRLG ? SPECIES_SQUIRTLE   : SPECIES_MUDKIP )
 
