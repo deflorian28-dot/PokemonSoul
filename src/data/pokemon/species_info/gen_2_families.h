@@ -7542,12 +7542,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_FAMILY_PHANPY
     [SPECIES_PHANPY] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 60,
-        .baseDefense   = 60,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 40,
+        .baseHP        = 50,
+        .baseAttack    = 75,
+        .baseDefense   = 75,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 30,
+        .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_GROUND),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 124,
@@ -7557,9 +7557,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_ROUGH_SKIN, ABILITY_DRY_SKIN, ABILITY_ADAPTABILITY },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Phanpy"),
+        .speciesName = _("Arynos"),
         .cryId = CRY_PHANPY,
         .natDexNum = NATIONAL_DEX_PHANPY,
         .categoryName = _("Long Nose"),
@@ -7610,18 +7610,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sPhanpyLevelUpLearnset,
         .teachableLearnset = sPhanpyTeachableLearnset,
         .eggMoveLearnset = sPhanpyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_DONPHAN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_DONPHAN}),
     },
 
     [SPECIES_DONPHAN] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 120,
-        .baseDefense   = 120,
+        .baseHP        = 54,
+        .baseAttack    = 100,
+        .baseDefense   = 95,
         .baseSpeed     = 50,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_GROUND),
+        .baseSpAttack  = 45,
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
         .evYield_Attack = 1,
@@ -7631,9 +7631,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_DRY_SKIN, ABILITY_ADAPTABILITY },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Donphan"),
+        .speciesName = _("Iguairon"),
         .cryId = CRY_DONPHAN,
         .natDexNum = NATIONAL_DEX_DONPHAN,
         .categoryName = _("Armor"),
@@ -7692,6 +7692,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sDonphanLevelUpLearnset,
         .teachableLearnset = sDonphanTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_IRON_TREADS}),
     },
 #endif //P_FAMILY_PHANPY
 
@@ -8236,12 +8237,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_LARVITAR] =
     {
         .baseHP        = 50,
-        .baseAttack    = 64,
-        .baseDefense   = 50,
-        .baseSpeed     = 41,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 50,
-        .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 10,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 45,
+        .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 67,
         .evYield_Attack = 1,
@@ -8250,9 +8251,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_STURDY, ABILITY_SOLID_ROCK, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Larvitar"),
+        .speciesName = _("Gemble"),
         .cryId = CRY_LARVITAR,
         .natDexNum = NATIONAL_DEX_LARVITAR,
         .categoryName = _("Rock Skin"),
@@ -8300,18 +8301,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sLarvitarLevelUpLearnset,
         .teachableLearnset = sLarvitarTeachableLearnset,
         .eggMoveLearnset = sLarvitarEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_PUPITAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_PUPITAR}),
     },
 
     [SPECIES_PUPITAR] =
     {
         .baseHP        = 70,
-        .baseAttack    = 84,
-        .baseDefense   = 70,
-        .baseSpeed     = 51,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
+        .baseAttack    = 85,
+        .baseDefense   = 100,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 60,
+        .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 45,
         .expYield = 144,
         .evYield_Attack = 2,
@@ -8320,16 +8321,16 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_SOLID_ROCK, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Pupitar"),
+        .speciesName = _("Sedipede"),
         .cryId = CRY_PUPITAR,
         .natDexNum = NATIONAL_DEX_PUPITAR,
         .categoryName = _("Hard Shell"),
         .height = 12,
         .weight = 1520,
         .description = COMPOUND_STRING(
-            "A Pupitar creates a gas inside its body\n"
+            "A Sedipede creates a gas inside its body\n"
             "that it ejects under compression to propel\n"
             "itself like a jet. Its body can withstand\n"
             "a collision with solid steel."),
@@ -8367,18 +8368,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sPupitarLevelUpLearnset,
         .teachableLearnset = sPupitarTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 55, SPECIES_TYRANITAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_TYRANITAR}),
     },
 
     [SPECIES_TYRANITAR] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 134,
-        .baseDefense   = 110,
-        .baseSpeed     = 61,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_ROCK, TYPE_DARK),
+        .baseHP        = 90,
+        .baseAttack    = 100,
+        .baseDefense   = 130,
+        .baseSpeed     = 35,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 85,
+        .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -8393,16 +8394,16 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_SAND_STREAM, ABILITY_NONE, ABILITY_UNNERVE },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_SOLID_ROCK, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Tyranitar"),
+        .speciesName = _("Stratolith"),
         .cryId = CRY_TYRANITAR,
         .natDexNum = NATIONAL_DEX_TYRANITAR,
         .categoryName = _("Armor"),
         .height = 20,
         .weight = 2020,
         .description = COMPOUND_STRING(
-            "A Tyranitar is so overwhelmingly powerful,\n"
+            "A Stratolith is so overwhelmingly powerful,\n"
             "it can bring down a whole mountain to make\n"
             "its nest. It roams in mountains seeking\n"
             "new opponents to fight."),
@@ -8449,13 +8450,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_TYRANITAR_MEGA] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 164,
-        .baseDefense   = 150,
-        .baseSpeed     = 71,
-        .baseSpAttack  = 95,
+        .baseHP        = 90,
+        .baseAttack    = 150,
+        .baseDefense   = 160,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 55,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_ROCK, TYPE_DARK),
+        .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
         .evYield_Attack = 3,
@@ -8464,9 +8465,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_SAND_STREAM, ABILITY_SAND_STREAM, ABILITY_SAND_STREAM },
+        .abilities = { ABILITY_PURIFYING_SALT, ABILITY_PURIFYING_SALT, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Tyranitar"),
+        .speciesName = _("Stratolith"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_TYRANITAR_MEGA,
     #else

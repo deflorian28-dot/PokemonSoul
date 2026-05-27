@@ -7237,7 +7237,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         )
         .levelUpLearnset = sGrumpigLevelUpLearnset,
         .teachableLearnset = sGrumpigTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_KOMMO-O, CONDITIONS(IF_HOLD_ITEM, ITEM_THICK_CLUB)}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_KOMMO_O, CONDITIONS({IF_HOLD_ITEM, ITEM_THICK_CLUB})}),
     },
 #endif //P_FAMILY_SPOINK
 
