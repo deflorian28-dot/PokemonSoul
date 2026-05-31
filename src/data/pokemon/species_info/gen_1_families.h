@@ -18062,7 +18062,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formChangeTable = sEeveeFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_JOLTEON},
                                 {EVO_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON},
-                                {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON}
+                                {EVO_LEVEL, 1, SPECIES_FLAREON}
                             #if P_GEN_6_CROSS_EVOS
                                 ,{EVO_LEVEL, 0, SPECIES_SYLVEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_KNOWS_MOVE_TYPE, TYPE_FAIRY})}
                             #endif
@@ -18349,12 +18349,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_FLAREON] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 130,
-        .baseDefense   = 60,
-        .baseSpeed     = 65,
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 110,
-        .baseSpDefense = 110,
+        .baseHP        = 89,
+        .baseAttack    = 65,
+        .baseDefense   = 73,
+        .baseSpeed     = 71,
+        .baseSpAttack  = 98,
+        .baseSpDefense = 104,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
@@ -18364,9 +18364,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLASH_FIRE, ABILITY_GUTS },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_OVERCOAT, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Flareon"),
+        .speciesName = _("Pyraf"),
         .cryId = CRY_FLAREON,
         .natDexNum = NATIONAL_DEX_FLAREON,
         .categoryName = _("Flame"),

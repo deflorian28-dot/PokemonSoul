@@ -2837,18 +2837,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sSkiploomLevelUpLearnset,
         .teachableLearnset = sSkiploomTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_JUMPLUFF}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 1, SPECIES_JUMPLUFF}),
     },
 
     [SPECIES_JUMPLUFF] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 55,
-        .baseDefense   = 70,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 55,
-        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
+        .baseHP        = 76,
+        .baseAttack    = 75,
+        .baseDefense   = 65,
+        .baseSpeed     = 99,
+        .baseSpAttack  = 104,
+        .baseSpDefense = 81
+        .types = MON_TYPES(TYPE_GRASS, TYPE_NORMAL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 230,
@@ -2866,12 +2866,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_GRASS),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_CHLOROPHYLL, ABILITY_LEAF_GUARD, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_CHLOROPHYLL, ABILITY_UNBURDEN, ABILITY_WIND_RIDER },
     #else
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_INFILTRATOR },
     #endif
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Jumpluff"),
+        .speciesName = _("Taraxeral"),
         .cryId = CRY_JUMPLUFF,
         .natDexNum = NATIONAL_DEX_JUMPLUFF,
         .categoryName = _("Cottonweed"),
